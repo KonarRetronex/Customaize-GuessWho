@@ -6,301 +6,97 @@
     <title>Guess Who</title>
 </head>
 <body>
-    <!-- Top Section -->
-    <div>
 
-        <div>
-            <div>Character Creation</div>
-            <div>Import Character</div>
-            <div>Reset character</div>
-            <form action="">
-                <div>
+
+    <!-- Top Section -->
+    <header class="top-section">
+
+        <section class="panel character-creator-panel">
+            <div class="panel-header">Character Creation</div>
+            <div class="panel-body">
+                <div class="btn-group">
+                    <button class="btn">Import Character</button>
+                    <button class="btn">Reset character</button>
+                </div>
+
+                <form>
                     <label for="character-name">Character Name:</label>
                     <input type="text" name="Character Name" id="character-name" placeholder="Input the Character name fromm left to using coma to separate">
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
+            
 
-        <div>
-            Guess Who
-        </div>
+        </section>
 
-        <div>
-            <div>Game Setting</div>
+        <section class="panel logo-panel">
+            <h1>Guess Who</h1>
+        </section>
 
-            <div>
-                <form action="">
-                    <label for="password"></label>
+        <section class="panel setting-panel">
+            <div class="panel-header">Game Setting</div>
+
+            <div class="panel-body">
+                <form>
+                    <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Make a same password with your friend">
-                </form>
 
-                <div>
+                <small>
                     *Both player need to put the same password
-                </div>
-            </div>
+                </small>
 
-            <div>
-                <form action="">
-                    <label for="game-key"></label>
-                    <input type="text" id="game-key" placeholder="Paste a game key from your friend">
                 </form>
 
-                <div>
-                    *player that make the character need to copy the game key,
-                    Player that didnt make the character need to paste the game key 
+                            
+                <form>
+                    <label for="game-key">Game Key</label>
+                    <input type="text" id="game-key" placeholder="Paste a game key from your friend">
+
+                    <small>
+                        *player that make the character need to copy the game key,
+                        Player that didn't make the character need to paste the game key 
+                    </small>
+                </form>
+
+                <div class="btn-group">
+                    <button class="btn">Copy My Game Key</button>
+                    <button class="btn launch-btn">Launch The Game</button>
                 </div>
-
-            <div>
-                <div>Copy My Game Key</div>
-                <div>Launch The Game</div>
             </div>
-        </div>
-
-    </div>
+        </section>
+    </header>
 
     <!-- Bottom Section -->
-     <div>
-        <div>Game Board</div>
+     <main class="board-section">
+        <div class="panel-header">Game Board</div>
 
-        <div class="card-holder">
-
-            <!-- Card1 -->
-            <div class="card">
-                <figure>
+        <div class="panel-body">
+            <div class="card-holder" id="card-grid">
+                <figure class="card">
                     <img src="assets/imgHolder.png" alt="">
+                    <figcaption class="card-name">Name</figcaption>
                 </figure>
-
-                <div class="card-name"></div>
             </div>
 
+            <footer class="game-footer">
+                <button class="btn guess-btn">Make A Guess</button>
+                
+                <div class="your-character">
+                    <p>Your Character</p>
+                    <figure class="card">
+                        <img src="assets/imgHolder.png" alt="">
+                        <figcaption class="card-name">Name</figcaption>
+                    </figure>
+                </div>
 
-            <!-- Card2 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
+                <div class="action-btns">
+                    <button>Shuffle "Your Character"</button>
+                    <button class="btn reset-btn">Reset Game</button>
 
-                <div class="card-name"></div>
-            </div>
-
-
-            <!-- Card3 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card4 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card5 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card6 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card7 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card8 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card9 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card10 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card11 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card12 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card13 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card14 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card15 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card16 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card17 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card18 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card19 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card20 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card21 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card22 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card23 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-
-            <!-- Card24 -->
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
+                </div>
+            </footer>
 
         </div>
-
-        <div>
-            <div>Your Character</div>
-            
-            <div class="card">
-                <figure>
-                    <img src="assets/imgHolder.png" alt="">
-                </figure>
-
-                <div class="card-name"></div>
-            </div>
-        </div>
-
-        <div>Make A guess</div>
-
-        <div>Shuffle "Your Character"</div>
-        <div>Reset Game</div>
-     </div>
+     </main>
     
 </body>
 </html>
