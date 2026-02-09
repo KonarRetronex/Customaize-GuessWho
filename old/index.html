@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Who? | Peer-to-Peer Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">👤 Guess Who?</div>
+        <button id="dark-mode-toggle">🌓 Toggle Dark Mode</button>
+    </nav>
+
+    <main id="app">
+        <section id="home-screen" class="view">
+            <h1>Ready to Play?</h1>
+            <div class="menu-cards">
+                <div class="card" onclick="ui.showView('setup-screen')">
+                    <h2>Manage Characters</h2>
+                    <p>Add your friends or custom avatars to the game.</p>
+                </div>
+                <div class="card" onclick="ui.showView('join-screen')">
+                    <h2>Start / Join Game</h2>
+                    <p>Connect with a friend using a Seed or Game Key.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="setup-screen" class="view hidden">
+            <button class="back-btn" onclick="ui.showView('home-screen')">← Back</button>
+            <h1>Character Creator</h1>
+            <div class="setup-container">
+                <form id="char-form">
+                    <input type="text" id="char-name" placeholder="Character Name" required>
+                    <input type="file" id="char-image" accept="image/*" required>
+                    <button type="submit">Add to Roster</button>
+                </form>
+                <div id="roster-grid" class="grid"></div>
+                <button class="danger-btn" onclick="game.clearRoster()">Reset Roster</button>
+            </div>
+        </section>
+
+        <section id="join-screen" class="view hidden">
+            <button class="back-btn" onclick="ui.showView('home-screen')">← Back</button>
+            <h1>Join Game</h1>
+            <div class="tab-container">
+                <div class="tab-box">
+                    <h3>Option A: Use Seed</h3>
+                    <p>Both players enter the same word/number to get the same board.</p>
+                    <input type="text" id="game-seed" placeholder="e.g. 'Banana123'">
+                    <button onclick="game.startWithSeed()">Launch Game</button>
+                </div>
+                <div class="tab-box">
+                    <h3>Option B: Game Key</h3>
+                    <p>Export your roster as a key for your friend to paste.</p>
+                    <button onclick="game.exportKey()">Copy My Game Key</button>
+                    <textarea id="import-key" placeholder="Paste friend's key here..."></textarea>
+                    <button onclick="game.importKey()">Import & Play</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-screen" class="view hidden">
+            <div class="game-header">
+                <div id="target-display">
+                    <span>Your Character:</span>
+                    <div id="my-character-card"></div>
+                </div>
+                <div class="game-controls">
+                    <button class="guess-btn" onclick="game.promptGuess()">Make a Guess!</button>
+                    <button class="danger-btn" onclick="ui.showView('home-screen')">Quit</button>
+                </div>
+            </div>
+            <div id="game-board" class="grid"></div>
+        </section>
+
+        <section id="win-screen" class="view hidden">
+            <div class="win-content">
+                <h1 id="win-message">YOU WON!</h1>
+                <div id="winner-reveal"></div>
+                <button onclick="ui.showView('home-screen')">Back to Menu</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
