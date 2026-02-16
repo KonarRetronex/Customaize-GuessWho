@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess Who</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -11,53 +12,66 @@
     <!-- Top Section -->
     <header class="top-section">
 
-        <section class="panel character-creator-panel">
-            <div class="panel-header">Character Creation</div>
-            <div class="panel-body">
-                <div class="btn-group">
+        <section class="panel">
+            <div class="panel-header">
+                <p>Character Creation</p>
+                <span>&lt;</span>
+            </div>
+            <div class="panel-body panel-body-chr">
+                <div class="btn-chr-section">
                     <button class="btn">Import Character</button>
                     <button class="btn">Reset character</button>
                 </div>
 
                 <form>
-                    <label for="character-name">Character Name:</label>
-                    <input type="text" name="Character Name" id="character-name" placeholder="Input the Character name fromm left to using coma to separate">
+                    <label for="character-name">Character Name</label>
+                    <input type="text" name="Character Name" id="character-name" placeholder="Input the Character name from left to right using coma to separate">
                 </form>
             </div>
             
 
         </section>
 
-        <section class="panel logo-panel">
-            <h1>Guess Who</h1>
+        <section class="panel tittle-panel">
+            <div class="panel-header panel-header-tittle" >
+                <span>&lt;</span>
+            </div>
+            
+            <div class="panel-body tittle-panel-body">
+                <h1>Guess Who</h1>
+            </div>
+            
         </section>
 
-        <section class="panel setting-panel">
-            <div class="panel-header">Game Setting</div>
+        <section class="panel">
+            <div class="panel-header">
+                <p>Game Setting</p>
+                <span>&lt;</span>
+            </div>
 
-            <div class="panel-body">
-                <form>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Make a same password with your friend">
+            <div class="panel-body panel-body-setting">
+                <div class="first-input">
+                    <form>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Make a same password">
+                    </form>
+                    <small>
+                        *Both player need to put the same password
+                    </small>
+                </div>
 
-                <small>
-                    *Both player need to put the same password
-                </small>
-
-                </form>
-
-                            
-                <form>
-                    <label for="game-key">Game Key</label>
-                    <input type="text" id="game-key" placeholder="Paste a game key from your friend">
-
+                <div class="second-input">
+                    <form>
+                        <label for="game-key">Game Key</label>
+                        <input type="text" id="game-key" placeholder="Paste a game key">
+                    </form>
                     <small>
                         *player that make the character need to copy the game key,
-                        Player that didn't make the character need to paste the game key 
+                        Player that didn't make the character need to paste the game key
                     </small>
-                </form>
+                </div>
 
-                <div class="btn-group">
+                <div class="btn-setting-section">
                     <button class="btn">Copy My Game Key</button>
                     <button class="btn launch-btn">Launch The Game</button>
                 </div>
@@ -66,30 +80,39 @@
     </header>
 
     <!-- Bottom Section -->
-     <main class="board-section">
-        <div class="panel-header">Game Board</div>
+     <main class="panel board-section">
+        <div class="panel-header">
+            <p>Game Board</p>
+            <span>&lt;</span>
+        </div>
 
         <div class="panel-body">
             <div class="card-holder" id="card-grid">
-                <figure class="card">
-                    <img src="assets/imgHolder.png" alt="">
-                    <figcaption class="card-name">Name</figcaption>
-                </figure>
+                <!-- <figure class="card">
+                    <div class="img-card-holder">
+                        <img class="chr-img" src="assets/imgHolder.png" alt="">
+                    </div>
+                    <figcaption class="card-name">Character 1</figcaption>
+                </figure> -->
             </div>
 
             <footer class="game-footer">
-                <button class="btn guess-btn">Make A Guess</button>
-                
                 <div class="your-character">
                     <p>Your Character</p>
                     <figure class="card">
-                        <img src="assets/imgHolder.png" alt="">
+                        <div class="img-cardyourcharacter-holder">
+                            <img class="chr-img" src="assets/imgHolder.png" alt="">
+                        </div>
                         <figcaption class="card-name">Name</figcaption>
                     </figure>
                 </div>
+                
+
+
+                <!-- <button class="btn guess-btn">Make A Guess</button> -->
 
                 <div class="action-btns">
-                    <button>Shuffle "Your Character"</button>
+                    <button class="btn shuffle-btn">Shuffle "Your Character"</button>
                     <button class="btn reset-btn">Reset Game</button>
 
                 </div>
@@ -98,5 +121,6 @@
         </div>
      </main>
     
+     <script src="script.js"></script>
 </body>
 </html>

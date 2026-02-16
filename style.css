@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+    --bg: #111111;
+    --panel-body: #424242;
+    --panel-header: #990000;
+    --font-color: #FDEFCF;
+    --default-button: #E57A00;
+    --active-button: #a25600;
+    --active-font-color: #d2c6aa;
+    --hover-button: #ff8903;
+    --second-bg:#717171;
+    --font:"Press Start 2P", Arial, Helvetica, 'sans-serif';
+    
+    /* font Size */
+    --big-font: ;
+    --normal-font: 0.8rem;
+    --small-font: 0.6rem;
+    --header-font: 0.6rem;
+    --tittle-font: 1rem;
+    
+     
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    font-family: var(--font);
+    color: var(--font-color);
+    margin: 1.5rem;
+    height: calc(100vh - 3rem); /* Screen height minus your margins */
+    display: flex;
+    flex-direction: column;
+}
+
+small{
+    font-size: var(--small-font);
+    margin-top: 1rem;
+}
+
+label{
+    font-size: var(--normal-font);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+/* Button */
+button{
+    background-color: var(--default-button);
+    font-family: var(--font);
+    color: var(--font-color);
+    border: none;
+    border-radius: 0.4rem;
+    font-size: var(--normal-font);
+    padding: 0.25rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+
+}
+
+button:hover{
+    background-color: var(--hover-button);
+}
+
+button:active{
+    background-color: var(--active-button);
+    color: var(--active-font-color);
+
+}
+
+/* Input */
+input{
+    background-color: var(--second-bg);
+    color: var(--font-color);
+    font-family: var(--font);
+    font-size: var(--small-font);
+    display: block;
+    height: 1.5rem;
+    padding: 0.5rem;
+}
+
+input:focus{
+    outline: 2px solid var(--default-button);
+}
+
+
+/* Panel */
+.panel{
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header{
+    background-color: var(--panel-header);
+    font-size: var(--header-font);
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel-body{
+    background-color: var(--panel-body);
+    flex-grow: 1;
+}
+
+.panel-header, .panel-body{
+    padding: 0.6rem;
+}
+
+
+
+.panel-header-tittle{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* TOP Section */
+
+    /* Left */
+.top-section{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;          /* space between panels */
+    width: 100%;
+    height: 22vh;
+    align-items: stretch; /* makes them same height */
+    margin-bottom: 1.5rem;
+}
+
+.panel-body-chr{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: var(--normal-font);
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.btn-chr-section{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 6vh;
+}
+
+    /* Center */
+.tittle-panel{
+    align-self: center;
+    font-size: var(--tittle-font);
+}
+
+.tittle-panel-body{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+    /* Right */
+.first-input, .second-input{
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.panel-body-setting{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1rem;
+}
+
+.btn-setting-section{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    height: 3vh;
+    margin-top: 0.3rem;
+}
+
+/* Bottom Section */
+.board-section{
+    flex-grow: 1;
+}
+
+.card-holder{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    margin-top: 1rem;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--panel-header);
+    padding: 0.5rem;
+    width: 170px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.card:nth-child(23){
+    grid-column: 9;
+}
+
+.card:nth-child(24){
+    grid-column: 10;
+}
+
+
+.img-card-holder, .img-cardyourcharacter-holder{
+    background-color: var(--default-button);
+    align-self: center;
+    height: 140px;
+    width: 150px;
+    border-radius: 5px;
+    /* object-fit: cover; */  
+
+}
+
+.img-card-holder .chr-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.card-name{
+    background-color: var(--default-button);
+    padding: 0.2rem;
+    text-align: center;
+    align-self: center;
+    width: 150px;
+    margin-top: 0.5rem;
+    border-radius: 0.3rem;
+    font-size: var(--small-font);
+}
+
+
+/* The footer */
+.your-character{
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--second-bg);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 1px solid var(--panel-header);
+}
+
+.action-btns{
+    display: flex;
+    margin-right: 2.6rem;
+    justify-content: end;
+    gap: 4rem;
+    margin-top: 1rem;
+
+}
+
+.shuffle-btn, .reset-btn{
+    padding: 1rem;
+    height: 5rem;
+    width: 170px;
+    
+}
+
+.shuffle-btn{
+    background-color: green;
+}
+
+.shuffle-btn:hover{
+    background-color: #06da06;
+}
+
+.shuffle-btn:active{
+    background-color: #024f02;
+}
+
+.reset-btn{
+    background-color: var(--panel-header);
+}
+.reset-btn:hover{
+    background-color: #df0000;
+}
+.reset-btn:active{
+    background-color: #660000;
+}
+
+
+.img-cardyourcharacter-holder .chr-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+
+
