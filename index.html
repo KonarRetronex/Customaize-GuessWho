@@ -19,12 +19,26 @@
             </div>
             <div class="panel-body panel-body-chr">
                 <div class="btn-chr-section">
-                    <button class="btn">Import Character</button>
-                    <button class="btn">Reset character</button>
+                    <button class="btn" id="import-btn">Import Character</button>
+                    <input type="file" id="file-input" multiple accept="image/*" style="display: none;">
+                    <input type="file" id="single-file-input" accept="image/*" style="display: none;">
+
+                    <button class="btn" id="reset-chr-btn" title="this will reset all the imported pictures">Reset character</button>
                 </div>
 
                 <form>
-                    <label for="character-name">Character Name</label>
+                    <div>
+                        <label for="character-name">Character Name</label>
+                        <button type="button" id="reset-chr-name-btn" title="this will reset all the name">🗘</button>
+                        <button type="button" id="info-btn" 
+                        title="[ctrl+left click] on image to change that specific image. 
+
+[ctrl+left click] on name to change that specific name
+
+[ctrl+shift+left click] on 'Your Character' to select a specific character for 'Your Character' ">?</button>
+
+
+                    </div>
                     <input type="text" name="Character Name" id="character-name" placeholder="Input the Character name from left to right using coma to separate">
                 </form>
             </div>
@@ -50,7 +64,7 @@
             </div>
 
             <div class="panel-body panel-body-setting">
-                <div class="first-input">
+                <!-- <div class="first-input">
                     <form>
                         <label for="password">Password</label>
                         <input type="password" id="password" placeholder="Make a same password">
@@ -74,7 +88,16 @@
                 <div class="btn-setting-section">
                     <button class="btn">Copy My Game Key</button>
                     <button class="btn launch-btn">Launch The Game</button>
-                </div>
+                </div> -->
+            <div class="first-row-setting">
+                <button class="btn" id="export-pack-btn" title="download the character pack that you have made">Download Character Pack</button>
+                <button class="btn" id="import-pack-btn" title="load character pack that you have">Load Character Pack</button>
+                <input type="file" id="pack-file-input" accept=".json" style="display: none;">
+            </div>
+
+
+            <button class="btn" id="launch-btn" title="once you launch the game, you won't be able to change both the character pic and name">Launch The Game</button>
+
             </div>
         </section>
     </header>
@@ -113,7 +136,7 @@
 
                 <div class="action-btns">
                     <button class="btn shuffle-btn">Shuffle "Your Character"</button>
-                    <button class="btn reset-btn">Reset Game</button>
+                    <button class="btn reset-btn" title="reset the game to change the character again, you wont lose any pic or name">Reset Game</button>
 
                 </div>
             </footer>
