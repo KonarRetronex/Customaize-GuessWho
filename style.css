@@ -3,7 +3,7 @@
 :root{
     --bg: #111111;
     --panel-body: #424242;
-    --panel-header: #00990f;
+    --panel-header: #990000;
     --font-color: #FDEFCF;
     --default-button: #E57A00;
     --active-button: #a25600;
@@ -96,7 +96,6 @@ input:focus{
 /* Panel */
 .panel{
     border-radius: 1rem;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
